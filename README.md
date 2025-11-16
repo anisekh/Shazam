@@ -3,6 +3,13 @@
 **ShazamPulse** — a compact SwiftUI demo that reproduces a Shazam-style listening screen.  
 A learning project focused on time-driven, shape-based animations in SwiftUI (TimelineView, oscillators + envelopes, phased reveals, gated pulses).
 
+## Keynote 
+
+You can download the Keynote file used in this project here:
+
+- **Preview on Google Drive:**  https://drive.google.com/file/d/1pawjtA2-uhPe6oRssKnJ4IoFSbNRrOEi/view?usp=sharing
+
+
 ---
 
 ## Demo
