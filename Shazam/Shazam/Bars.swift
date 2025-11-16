@@ -9,9 +9,9 @@ import SwiftUI
 
 struct Bars: View {
         
-        let barsMaxHeight: CGFloat = 50
-        let barsMinHeight: CGFloat = 20
-        let barsWidth: CGFloat = 10
+        let barsMaxHeight: CGFloat = 30
+        let barsMinHeight: CGFloat = 12
+        let barsWidth: CGFloat = 8
         let barsSpacing: CGFloat = 2
         let barsCount: Int = 3
         let barsColor: Color = Color.white
@@ -23,10 +23,14 @@ struct Bars: View {
         var body: some View {
             
                 
+            
                 ZStack {
-                    LinearGradient(gradient: Gradient(colors: [Color.blue, Color.white]), startPoint: .top, endPoint: .bottom)
-                        .ignoresSafeArea(edges: .all)
-                    
+                    // background gradient
+                    /*LinearGradient(gradient: Gradient(colors: [.blue, .white]),
+                                   startPoint: .top, endPoint: .bottom)
+                        .ignoresSafeArea()
+                     */
+
                     
                     // TimelineView for time-driven animation
                     

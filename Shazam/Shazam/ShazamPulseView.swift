@@ -53,13 +53,6 @@ struct ShazamPulseView: View {
     let diskLocalOscAmp: CGFloat = 0.03
     
     
-    // Three bars tuning
-    let barsMaxHeight: CGFloat = 25
-    let barsMinHeight: CGFloat = 6
-    let barsWidth: CGFloat = 6
-    let barsSpacing: CGFloat = 8
-    let barsFrequency: Double = 1            // how fast bars oscillate
-    let barsColor: Color = .white
     
     
     
@@ -155,10 +148,7 @@ struct ShazamPulseView: View {
                     
                   
 
-                        // base phase so bars are out-of-sync a bit
-                        let barsPhaseOffset = t * barsFrequency
 
-                        // place bars a bit below the center circle (tweak multiplier if needed)
                      
 
                     // ---------- DRAW: main structure ----------
@@ -242,19 +232,8 @@ struct ShazamPulseView: View {
                         } // END ZSTACK
                         .padding(50)
                         
-                        HStack(spacing: barsSpacing * centerScaleFit) {
-                            ForEach(0..<3) { i in
-                                let phaseOffset = Double(i) * 0.55
-                                let sine = (sin(barsPhaseOffset + phaseOffset) * 0.5 + 0.5)   // 0..1
-                                // final height mixes sine (0..1) with growth factor
-                                let h = barsMinHeight + CGFloat(sine) * (barsMaxHeight - barsMinHeight) 
-                                VStack { Spacer()
-                                    Capsule()
-                                        .frame(width: barsWidth * centerScaleFit, height: max(1.0, h) * centerScaleFit)
-                                        .foregroundColor(barsColor)
-                                        .opacity(0.95)
-                                    Spacer()
-                                }}}
+                   Bars()
+                            .frame(height: 40)
                                 
                                 Text("Listening for music")
                                     .font(.title2)
